@@ -1,0 +1,11 @@
+<ng-container *ngIf="loading; else data">
+  loading...
+</ng-container>
+
+<ng-template #data>
+  <input
+    type="text"
+    [value]="formattedValue"
+    (input)="onInput($event)"
+  />
+</ng-template>
